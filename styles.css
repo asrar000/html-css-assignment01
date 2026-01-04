@@ -1,0 +1,218 @@
+/* =====================================================
+   ROOT VARIABLES (DESIGN SYSTEM)
+===================================================== */
+:root {
+  --color-primary: #2563eb;
+  --color-text: #1f2933;
+  --color-muted: #6b7280;
+  --color-border: #e5e7eb;
+  --color-bg-dark: #111827;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+
+  --radius: 8px;
+}
+
+/* =====================================================
+   RESET & BASE
+===================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+/* =====================================================
+   UTILITIES
+===================================================== */
+.container {
+  width: min(1200px, 90%);
+  margin-inline: auto;
+}
+
+.section {
+  margin-block: var(--space-lg);
+}
+
+/* =====================================================
+   HEADER & NAV
+===================================================== */
+.site-header {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-sm) 0;
+}
+
+.nav__menu {
+  list-style: none;
+  display: flex;
+  gap: var(--space-md);
+}
+
+/* =====================================================
+   LAYOUT (MOBILE FIRST)
+===================================================== */
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+/* =====================================================
+   CONTENT
+===================================================== */
+.breadcrumb {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+}
+
+.listing__meta {
+  color: var(--color-muted);
+}
+
+.listing__hero figcaption {
+  font-size: 0.875rem;
+  color: var(--color-primary);
+  margin-top: var(--space-xs);
+}
+
+.highlights {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.amenities {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.amenities li {
+  flex: 1 1 140px;
+}
+
+.review {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-sm);
+}
+
+.review__author {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+}
+
+/* =====================================================
+   BOOKING CARD
+===================================================== */
+.booking__card {
+  border: 1px solid var(--color-border);
+  padding: var(--space-md);
+  border-radius: var(--radius);
+}
+
+.booking__price {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+.booking__dates {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin: var(--space-sm) 0;
+}
+
+.btn--primary {
+  width: 100%;
+  padding: var(--space-sm);
+  background: var(--color-primary);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius);
+}
+
+.btn--primary:focus-visible {
+  outline: 3px solid #93c5fd;
+}
+
+.booking__note {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  margin-top: var(--space-xs);
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+.site-footer {
+  background: var(--color-bg-dark);
+  color: #ffffff;
+  padding: var(--space-lg) 0;
+}
+
+/* =====================================================
+   TABLET (449px – 991px)
+===================================================== */
+@media (min-width: 449px) and (max-width: 991px) {
+  .highlights {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .highlight {
+    flex: 1 1 45%;
+  }
+}
+
+/* =====================================================
+   DESKTOP (≥ 992px)
+===================================================== */
+@media (min-width: 992px) {
+  .layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .listing {
+    flex: 2.5;
+  }
+
+  .booking {
+    flex: 1;
+    position: sticky;
+    top: var(--space-lg);
+  }
+}
