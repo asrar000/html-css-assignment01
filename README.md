@@ -1,1 +1,35 @@
-# html-css-assignment01
+## Overview of Structure and Approach
+
+This is a single page vacation hotel room rental website created using **Vanilla HTML and CSS** (no frameworks).
+
+I designed the page with a clear, logical flow that works well on both desktop and mobile devices:
+
+Header
+    A clean white header containing the logo and navigation menu (with a mobile hamburger toggle).
+Breadcrumb
+    A subtle gray bar showing the user's current location in the site hierarchy (e.g., Park Shore Rentals > USA > Florida > Destin).
+Main Content Area
+    The layout splits into two columns on desktop:
+    Left column (main content):
+        Property title and key details (rating, bedrooms, bathrooms, guests)
+        Image gallery (one large main image + two smaller thumbnails)
+        Brief property description with a "Show more" button
+        Location section with text info and an embedded Google Maps iframe
+    Right column (sticky booking card):
+        The booking sidebar stays fixed in place while scrolling (until it reaches the footer), making it easy for users to check prices and availability at any time.
+Reviews Section
+    A dedicated white section below the main content displaying customer reviews in a responsive grid (3 columns on desktop, 1 column on mobile).
+Footer
+    A dark footer with categorized links, legal information, and copyright details.
+
+This structure ensures a smooth user experience: visitors see the most important information (images, description, and booking options) right away, while the sticky sidebar keeps the call-to-action always accessible without feeling intrusive.
+
+## BREAKPOINTS ##
+- **Mobile** (up to 448px)
+- **Tablet** (449px – 991px)
+- **Desktop** (992px and up)
+
+## Assumptions and Limitations ##
+(i)-Font Awesome is included via CDN for icons (stars, features, notes).
+(ii)-No CSS variables
+(iii)-Very minimal accessiblity
